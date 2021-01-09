@@ -1,0 +1,107 @@
+<svg width="480" height="133" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <foreignObject width="480" height="133">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="container">
+          <style>
+              div {
+                  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+              }
+              .main {
+                  display: flex;
+                  background-color: #282C34;
+                  padding: 10px 10px 10px 5px;
+                  border-radius: 5px;
+              }
+              .container {
+                  border-radius: 5px;
+                  padding: 10px 10px 10px 0px;
+              }
+              .playing {
+                  font-weight: bold;
+                  color: #53b14f;
+                  text-align: center;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+              }
+              .not-play {
+                  color: #ff1616;
+              }
+              .art {
+                  float: left;
+                  width: 27%;
+                  margin-left: -5px;
+              }
+              .text {
+                  width: 71%;
+              }
+              .song {
+                  font-size: 24px;
+                  color: #C6A86F;
+                  font-weight: bold;
+                  text-align: center;
+                  margin-top: 3px;
+              }
+              .artist {
+                  font-size: 20px;
+                  color: #D66A71;
+                  text-align: center;
+                  margin-bottom: 5px;
+              }
+              .logo {
+                  margin-left: 5px;
+                  margin-top: 5px;
+              }
+              .cover {
+                  border-radius: 5px;
+                  height: 100px;
+                  width: 100px;
+              }
+              #bars {
+                  height: 30px;
+                  bottom: 23px;
+                  margin: -20px 0 0 0px;
+                  position: absolute;
+                  width: 40px;
+              }
+              .bar {
+                  background: #D66A71cc;
+                  bottom: 1px;
+                  height: 3px;
+                  position: absolute;
+                  width: 3px;
+                  animation: sound 0ms -800ms linear infinite alternate;
+              }
+
+              @keyframes sound {
+                  0% {
+                      opacity: .35;
+                      height: 3px;
+                  }
+                  100% {
+                      opacity: 1;
+                      height: 15px;
+                  }
+              }
+          </style>
+
+
+          <div class="main">
+              <a class="art" href="" target="_BLANK">
+              {{ img }}
+                  <center>
+                          <img src="" class="cover" />
+                  </center>
+              </a>
+
+              <div class="text">
+                  <div class="song">test</div>
+                  <div class="artist">test</div>
+                  <div id="bars">
+                  </div>
+              </div>
+
+          </div>
+
+      </div>
+  </foreignObject>
+</svg>

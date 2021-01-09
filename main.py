@@ -19,9 +19,12 @@ def make_SVG(theme, posts):
 @app.route("/", defaults={"path": ""})
 @app.route("/<path:path>")
 def catch_all(path):
-    theme = request.args.get("theme") or "default"
+    theme_key = request.args.get("theme") or "default"
     image = request.args.get("image") or "default"
     user = request.args.get("user") or "GitShareUser"
+
+    with open("themes.json") as f:
+        theme = json.load(f)[theme_key]
 
     url = f"https://raw.githubusercontent.com/{user}/{user}/master/GitShare.json"
 

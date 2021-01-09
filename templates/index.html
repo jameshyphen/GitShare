@@ -7,24 +7,13 @@
               }
               .main {
                   display: flex;
-                  background-color: #282C34;
+                  background-color: {{ theme.background }};
                   padding: 10px 10px 10px 5px;
                   border-radius: 5px;
               }
               .container {
                   border-radius: 5px;
                   padding: 10px 10px 10px 0px;
-              }
-              .playing {
-                  font-weight: bold;
-                  color: #53b14f;
-                  text-align: center;
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-              }
-              .not-play {
-                  color: #ff1616;
               }
               .art {
                   float: left;
@@ -36,20 +25,16 @@
               }
               .description {
                   font-size: 24px;
-                  color: #C6A86F;
+                  color: {{theme.description}};
                   font-weight: bold;
                   text-align: center;
                   margin-top: 3px;
               }
               .title {
                   font-size: 20px;
-                  color: #D66A71;
+                  color: {{ theme.title }};
                   text-align: center;
                   margin-bottom: 5px;
-              }
-              .logo {
-                  margin-left: 5px;
-                  margin-top: 5px;
               }
               .cover {
                   border-radius: 5px;

@@ -3,6 +3,7 @@ from json.decoder import JSONDecodeError
 from typing import List
 from flask import Flask, Response, jsonify, render_template, request
 import requests
+import json
 
 app = Flask(__name__)
 
@@ -27,15 +28,16 @@ def catch_all(path):
     response = requests.get(url)
     try:
         posts = response.json()["Posts"]
+        print(posts)
 
     except JSONDecodeError as e:
-        posts = {
+        posts = [{
                     "title": "Error",
                     "description": "GitShare json on your personal profile is either invalid or missing.",
                     "image": "https://i.imgur.com/TxAh3ln.png"
-        }
-
-    print(posts)
+        }]
+        print("CRASHED")
+        print(e)
 
     svg = make_SVG(theme, posts)
 

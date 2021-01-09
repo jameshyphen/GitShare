@@ -20,8 +20,12 @@ def make_SVG(theme, posts):
 @app.route("/<path:path>")
 def catch_all(path):
     theme_key = request.args.get("theme") or "default"
-    image = request.args.get("image") or "default"
+    banner_image = request.args.get("image") or "default"
     user = request.args.get("user") or "GitShareUser"
+
+    if theme_key == "personal":
+        # if the theme is personal then they can have a json key with values of the colors in their own GitShare.json
+        pass
 
     with open("themes.json") as f:
         theme = json.load(f)[theme_key]

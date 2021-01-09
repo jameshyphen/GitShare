@@ -8,10 +8,10 @@ verify_ssl = true
 [packages]
 flask = "*"
 requests = "*"
+pydantic = "*"
 
 [requires]
 python_version = "3.8"
-
 
 [scripts]
 dev = "FLASK_APP=main.py FLASK_ENV=development flask run"

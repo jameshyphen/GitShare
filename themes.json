@@ -1,5 +1,11 @@
 {
-    "default":{},
+    "default":{
+        "background": "#FFFFFF",
+        "title": "#000000",
+        "description": "#000000",
+        "links-background": "#F0F0F0",
+        "links-color": "#000000"
+    },
     "blue":{},
     "red":{},
     "cyan":{},
